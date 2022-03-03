@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+    html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+    .showInformation {display: none}
+    </style>
+  </head>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+     <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
+     <a href="agendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="agendar"><i class="fa fa-business-time">Agendar</i></a>
+     <a href="contactos.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title=""><i class="fa fa-user w3-margin-right">  Contactos</i></a>
+     <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+       Logout
+     </a>
+    </div>
+   </div>
+  
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="home.htm" class="w3-bar-item w3-button w3-padding-large">Logo</a>
+    <a href="agendar.html" class="w3-bar-item w3-button w3-padding-large">Agendar</a>
+    <a href="contactos.html" class="w3-bar-item w3-button w3-padding-large">Contactos</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-padding-large">Logout</a>
+  </div>
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+        <!-- The Grid -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    
+                    <div class="form-group">
+                        <label for="topico">Tópico</label>
+                        <label type="text" class="form-control" id="topico" name="topico">Topico do Meeting</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-time">Data de inicio</label>
+                        <label type="date" class="form-control date" id="start-time" name="start-time" data-toggle="datetimepicker" data-target="#start-time">Data de inicio</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duração</label>
+                        <label type="time" class="form-control time" id="duration" name="duration">Duração</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Participantes</label>
+                        <label type="text" class="form-control" id="Participantes" name="Participantes">Duração</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End Grid -->
+    </div>
+    
+    <!-- End Page Container -->
+</div>
+<br>
+ 
+<script>
+// Accordion
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function show(evt, linkName) {
+  var x, selected;
+  x = document.getElementsByClassName("showInformation");
+ 
+  selected = document.getElementById("adicionarParticipantes");
+  console.log(selected.checked);
+ 
+  if (selected.checked == true) {
+    document.getElementById(linkName).style.display = "block";
+  } else {
+    document.getElementById(linkName).style.display = "None";
+  }
+}
+
+
+</script>
+
+</body>
+</html> 
