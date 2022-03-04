@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Contactos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,127 +11,139 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <style>
-    html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
-    .showInformation {display: none}
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Open Sans", sans-serif
+        }
+        
+        .showInformation {
+            display: none
+        }
     </style>
-  </head>
+</head>
+
 <body class="w3-theme-l5">
 
-  <div class="w3-top">
-    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-     <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
-     <a href="agendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="agendar"><i class="fa fa-business-time">Agendar</i></a>
-     <a href="contactos.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title=""><i class="fa fa-user w3-margin-right">  Contactos</i></a>
-     <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
+            <a href="agendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="agendar"><i class="fa fa-business-time">Agendar</i></a>
+            <a href="contactos.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title=""><i class="fa fa-user w3-margin-right">  Contactos</i></a>
+            <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
        Logout
      </a>
+        </div>
     </div>
-   </div>
-  
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="home.htm" class="w3-bar-item w3-button w3-padding-large">Logo</a>
-    <a href="agendar.html" class="w3-bar-item w3-button w3-padding-large">Agendar</a>
-    <a href="contactos.html" class="w3-bar-item w3-button w3-padding-large">Contactos</a>
-    <a href="login.html" class="w3-bar-item w3-button w3-padding-large">Logout</a>
-  </div>
-<!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
-  <!-- The Grid -->
-    <div class="w3-row">
 
-         <!-- Left Column -->
-        <div class="w3-col m3">
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="home.htm" class="w3-bar-item w3-button w3-padding-large">Logo</a>
+        <a href="agendar.html" class="w3-bar-item w3-button w3-padding-large">Agendar</a>
+        <a href="contactos.html" class="w3-bar-item w3-button w3-padding-large">Contactos</a>
+        <a href="login.html" class="w3-bar-item w3-button w3-padding-large">Logout</a>
+    </div>
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <!-- The Grid -->
+        <div class="w3-row">
 
-            <div class="w3-card w3-round w3-white">
-                <div class="w3-container">
-                    <h4 class="w3-center">Meus contactos</h4>
-                    <hr class="w3-clear">
-                    <div class="w3-half w3-margin">
-                        <label class="w3-margin-right">Nr de Contactos:</label>
-                        <label>0</label>
+            <!-- Left Column -->
+            <div class="w3-col m3">
+
+                <div class="w3-card w3-round w3-white">
+                    <div class="w3-container">
+                        <h4 class="w3-center">Meus contactos</h4>
+                        <hr class="w3-clear">
+                        <div class="w3-half w3-margin">
+                            <label class="w3-margin-right">Nr de Contactos:</label>
+                            <label>0</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <!-- New Contact-->
-            <div class="w3-card w3-round w3-white w3-center">
-                <div class="w3-container">
-                <p><button class="w3-button w3-block w3-theme-l4">Adicionar contacto</button></p>
+                <br>
+                <!-- New Contact-->
+                <div class="w3-card w3-round w3-white w3-center">
+                    <div class="w3-container">
+                        <p><button class="w3-button w3-block w3-theme-l4">Adicionar contacto</button></p>
+                    </div>
                 </div>
+                <br>
             </div>
-            <br>
+
+            <!-- Middle Column -->
+            <div class="w3-col m7">
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <div id="" class="w3-container w3-card w3-white w3-round w3-margin myLink"><br>
+                        <span class="w3-right w3-opacity">Data/Horario</span>
+                        <h5>Nome</h5><br>
+                        <hr class="w3-clear">
+                        <p>Email</p>
+                        <hr class="w3-clear">
+                        <p>Telemovel</p>
+                        <hr class="w3-clear">
+                        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class=""></i>Reuniões Marcadas</button>
+                        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class=""></i>Editar</button>
+                        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class=""></i>Deletar</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- End Grid -->
         </div>
 
-    <!-- Middle Column -->
-        <div class="w3-col m7">
-            <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-                <div id="" class="w3-container w3-card w3-white w3-round w3-margin myLink"><br>
-                    <span class="w3-right w3-opacity">Data/Horario</span>
-                    <h5>Nome</h5><br>
-                    <hr class="w3-clear">
-                    <p>Email</p>
-                    <hr class="w3-clear">
-                    <p>Telemovel</p>
-                    <hr class="w3-clear">
-                    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class=""></i>Reuniões Marcadas</button> 
-                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class=""></i>Editar</button>
-                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class=""></i>Deletar</button> 
-                </div>
-                
-            </div>
-            
-        </div>
-         
-    <!-- End Grid -->
+        <!-- End Page Container -->
     </div>
-  
-<!-- End Page Container -->
-</div>
-<br>
- 
-<script>
-// Accordion
+    <br>
 
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
+    <script>
+        // Accordion
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme-d1";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+            }
+        }
 
-function show(evt, linkName) {
-  var x, selected;
-  x = document.getElementsByClassName("showInformation");
- 
-  selected = document.getElementById("adicionarParticipantes");
-  console.log(selected.checked);
- 
-  if (selected.checked == true) {
-    document.getElementById(linkName).style.display = "block";
-  } else {
-    document.getElementById(linkName).style.display = "None";
-  }
-}
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
 
+        function show(evt, linkName) {
+            var x, selected;
+            x = document.getElementsByClassName("showInformation");
 
-</script>
+            selected = document.getElementById("adicionarParticipantes");
+            console.log(selected.checked);
 
+            if (selected.checked == true) {
+                document.getElementById(linkName).style.display = "block";
+            } else {
+                document.getElementById(linkName).style.display = "None";
+            }
+        }
+    </script>
+
+    <script src="jss/contactos.js"></script>
 </body>
-</html> 
+
+</html>

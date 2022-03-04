@@ -6,10 +6,10 @@ services:
       - 33060:3306
     command: --default-authentication-plugin=mysql_native_password --secure-file-priv=''
     environment:
-      MYSQL_DATABASE: demo
-      MYSQL_USER: demo
-      MYSQL_ROOT_PASSWORD: secret1
-      MYSQL_PASSWORD: secret2 
+      MYSQL_DATABASE: Meetings
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: Meet!12345
+      MYSQL_PASSWORD: Meet!12345 
     volumes:
       - ./projdatabase:/var/lib/db/mysql
     networks:
@@ -19,7 +19,7 @@ services:
   springbootapi:
     depends_on:  
       - mysql
-    build: ./MeetingAPI
+    build: ./MeetingsAPI
     ports: 
       - 8000:8000
     restart: on-failure
@@ -27,12 +27,12 @@ services:
       SPRING_APPLICATION_JSON: '{
         "server.port": 8000,
         "spring.datasource.url" : "jdbc:mysql://mysql:3306/demo?useSSL=false",
-        "spring.datasource.username" : "demo",
-        "spring.datasource.password" : "secret2",
+        "spring.datasource.username" : "root",
+        "spring.datasource.password" : "Meet!12345",
         "spring.jpa.database-platform" : "org.hibernate.dialect.MySQL5InnoDBDialect",
         "spring.jpa.hibernate.ddl-auto" : "update"}'
     volumes:
-      - ./MeetingAPI:/var/lib/api
+      - ./MeetingsAPI:/var/lib/api
   
   webapp:
     depends_on:

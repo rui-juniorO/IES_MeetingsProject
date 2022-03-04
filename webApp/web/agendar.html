@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>agendar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,154 +11,177 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <style>
-    html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
-    .showInformation {display: none}
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Open Sans", sans-serif
+        }
+        
+        .showInformation {
+            display: none
+        }
     </style>
-  </head>
+</head>
+
 <body class="w3-theme-l5">
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-   <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
-   <a href="agendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="agendar"><i class="fa fa-business-time">Agendar</i></a>
-   <a href="contactos.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title=""><i class="fa fa-user w3-margin-right">  Contactos</i></a>
-   <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
+            <a href="agendar.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="agendar"><i class="fa fa-business-time">Agendar</i></a>
+            <a href="contactos.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title=""><i class="fa fa-user w3-margin-right">  Contactos</i></a>
+            <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
      Logout
    </a>
-  </div>
- </div>
+        </div>
+    </div>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="home.htm" class="w3-bar-item w3-button w3-padding-large">Logo</a>
-  <a href="agendar.html" class="w3-bar-item w3-button w3-padding-large">Agendar</a>
-  <a href="contactos.html" class="w3-bar-item w3-button w3-padding-large">Contactos</a>
-  <a href="login.html" class="w3-bar-item w3-button w3-padding-large">Logout</a>
-</div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="home.htm" class="w3-bar-item w3-button w3-padding-large">Logo</a>
+        <a href="agendar.html" class="w3-bar-item w3-button w3-padding-large">Agendar</a>
+        <a href="contactos.html" class="w3-bar-item w3-button w3-padding-large">Contactos</a>
+        <a href="login.html" class="w3-bar-item w3-button w3-padding-large">Logout</a>
+    </div>
 
-<!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
-  <!-- The Grid -->
-  <div class="w3-row">
-    
-    <!-- Middle Column -->
-    <div class="w3-col m12">
-    
-          <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-            <label class="w3-text"><h2 class="w3-margin">Agendar Reunião</h2></label>
-            <hr class="w3-clear">
-            
-            <form class="w3-container ">
-              <label class="w3-text "><b>Tópico</b></label>
-              <input class="w3-input w3-border w3-margin" type="text">
-              
-              <label class="w3-text "><b>Início</b></label>
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <!-- The Grid -->
+        <div class="w3-row">
 
-              <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
-                <div class="w3-half">
-                  <label>Data</label>
-                  <input type="date" step="1800"/>
-                  <label>Hora</label>
-                  <input type="time" step="1800"/>
-                </div>
-              </div>
+            <!-- Middle Column -->
+            <div class="w3-col m12">
 
-              <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
-                <div class="w3-half">
-                  <label>Duração</label>
-                  <input type="time" step="1800"/>
-                </div>
-              </div>
-              
-              <hr class="w3-clear">
+                <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                    <label class="w3-text"><h2 class="w3-margin">Agendar Reunião</h2></label>
+                    <hr class="w3-clear">
 
-              <label class="w3-text "><b>Participantes</b></label>
+                    <form class="w3-container ">
 
-              <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
-                <div class="w3-half">
-                  <label>Deseja adicionar participantes da sua lista de contactos?</label>
-                  <input class="checkContacts" id="adicionarParticipantes" type="checkbox" onclick="show(event,'contacts')";/>
-                </div>
-              </div>
+                        <div class="form-group">
+                            <label for="title" class="w3-text "><b>Tópico</b></label>
+                            <input type="text" class="form-control w3-input w3-border w3-margin" id="title" name="title" placeholder="Tópico da reunião" required>
+                        </div>
 
-              <div id="contacts" class="w3-row-padding w3-margin showInformation" style="margin:1 -10px;">
-                <div class="w3-half">
-                  <select class="w3-select w3-border " name="option" multiple>
+                        <div class="form-group">
+                            <label for="description" class="w3-text "><b>Descrição</b></label>
+                            <input type="text" class="form-control w3-input w3-border w3-margin" id="description" name="description" placeholder="Descrição" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="w3-text "><b>Início</b></label>
+
+                            <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
+                                <div class="w3-half">
+                                    <label for="startDate">Data</label>
+                                    <input class="form-control date" type="date" step="1800" id="startDate" name="startDate" data-target="#startDate" required/>
+                                    <label for="startTime">Hora</label>
+                                    <input class="form-control" type="time" step="1800" id="startTime" name="startTime" data-target="#startTime" required/>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
+                            <div class="w3-half">
+                                <label for="duration">Duração</label>
+                                <input class="form-control" type="time" step="1800" id="duration" name="duration" data-target="#duration" />
+                            </div>
+                        </div>
+
+
+                        <hr class="w3-clear">
+
+                        <label class="w3-text "><b>Participantes</b></label>
+
+                        <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
+                            <div class="w3-half">
+                                <label>Deseja adicionar participantes da sua lista de contactos?</label>
+                                <input class="checkContacts" id="adicionarParticipantes" type="checkbox" onclick="show(event,'contacts')" ;/>
+                            </div>
+                        </div>
+
+                        <div id="contacts" class="w3-row-padding w3-margin showInformation" style="margin:1 -10px;">
+                            <div class="w3-half">
+                                <select class="w3-select w3-border " name="option" multiple>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
                   </select>
+                            </div>
+                        </div>
+
+                        <label class="w3-text "><b>Password</b></label>
+
+                        <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
+                            <div for="password" class="w3-half">
+                                <label>Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w3-btn w3-theme-d3 w3-margin">Agendar</button>
+
+                    </form>
+
                 </div>
-              </div>
+                <!-- End Grid -->
+            </div>
 
-              <label class="w3-text "><b>Password</b></label>
+            <!-- End Page Container -->
+        </div>
+        <br>
 
-              <div class="w3-row-padding w3-margin" style="margin:1 -10px;">
-                <div class="w3-half">
-                  <label>Password</label>
-                  <input type="password"/>
-                </div>
-              </div>
-              
-              <button class="w3-btn w3-theme-d3 w3-margin">Agendar</button>
-              
-            </form>
-            
-          </div>  
-  <!-- End Grid -->
-  </div>
-  
-<!-- End Page Container -->
-</div>
-<br>
- 
-<script>
-// Accordion
+        <script>
+            // Accordion
 
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-theme-d1";
+                } else {
+                    x.className = x.className.replace("w3-show", "");
+                    x.previousElementSibling.className =
+                        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+                }
+            }
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+            // Used to toggle the menu on smaller screens when clicking on the menu button
+            function openNav() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
 
-function show(evt, linkName) {
-  var x, selected;
-  x = document.getElementsByClassName("showInformation");
- 
-  selected = document.getElementById("adicionarParticipantes");
-  console.log(selected.checked);
- 
-  if (selected.checked == true) {
-    document.getElementById(linkName).style.display = "block";
-  } else {
-    document.getElementById(linkName).style.display = "None";
-  }
-}
+            function show(evt, linkName) {
+                var x, selected;
+                x = document.getElementsByClassName("showInformation");
 
+                selected = document.getElementById("adicionarParticipantes");
+                console.log(selected.checked);
 
+                if (selected.checked == true) {
+                    document.getElementById(linkName).style.display = "block";
+                } else {
+                    document.getElementById(linkName).style.display = "None";
+                }
+            }
+        </script>
 
-
-
-</script>
-
+        <script src="jss/agendar.js"></script>
 </body>
-</html> 
+
+</html>

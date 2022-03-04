@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,102 +13,115 @@
     <link rel="stylesheet" href="css/main.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <style>
-    html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
-    .showInformation {display: none}
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Open Sans", sans-serif
+        }
+        
+        .showInformation {
+            display: none
+        }
     </style>
-  </head>
+</head>
+
 <body class="w3-theme-l5">
 
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-        <a href="" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
-        <a href="registar.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Registar">
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home"></i></a>
+            <a href="registar.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Registar">
             Registar
         </a>
-    </div>
-</div>
-  
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="registar.html" class="w3-bar-item w3-button w3-padding-large">Registar</a>
-  </div>
-
-<!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
-    <!-- The Grid -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
-                <form>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        <i class="fa fa-envelope"></i>
-                        <i class="fa fa-exclamation-circle"></i>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-                        <i class="fa fa-lock"></i>
-                        <i class="fa fa-exclamation-circle"></i>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
         </div>
     </div>
-    <!-- End Grid -->
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="" class="w3-bar-item w3-button w3-padding-large">Home</a>
+        <a href="registar.html" class="w3-bar-item w3-button w3-padding-large">Registar</a>
     </div>
-  
-<!-- End Page Container -->
-</div>
-<br>
- 
-<script>
-// Accordion
 
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <!-- The Grid -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <i class="fa fa-envelope"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            <i class="fa fa-lock"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Grid -->
+    </div>
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+    <!-- End Page Container -->
+    </div>
+    <br>
 
-function show(evt, linkName) {
-  var x, selected;
-  x = document.getElementsByClassName("showInformation");
- 
-  selected = document.getElementById("adicionarParticipantes");
-  console.log(selected.checked);
- 
-  if (selected.checked == true) {
-    document.getElementById(linkName).style.display = "block";
-  } else {
-    document.getElementById(linkName).style.display = "None";
-  }
-}
+    <script>
+        // Accordion
 
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme-d1";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+            }
+        }
 
-</script>
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function show(evt, linkName) {
+            var x, selected;
+            x = document.getElementsByClassName("showInformation");
+
+            selected = document.getElementById("adicionarParticipantes");
+            console.log(selected.checked);
+
+            if (selected.checked == true) {
+                document.getElementById(linkName).style.display = "block";
+            } else {
+                document.getElementById(linkName).style.display = "None";
+            }
+        }
+    </script>
+
+    <script src="jss/login.js"></script>
 
 </body>
-</html> 
+
+</html>
